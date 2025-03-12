@@ -1,59 +1,66 @@
-
-import { useState } from 'react';
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import p1 from "@/assets/project/p1.jpg";
+import p2 from "@/assets/project/p2.jpg";
+import p3 from "@/assets/project/p3.jpg";
+import p4 from "@/assets/project/p4.jpg";
+import p5 from "@/assets/project/p5.jpg";
+import p6 from "@/assets/project/p6.jpg";
+import p7 from "@/assets/project/p7.jpg";
+import p8 from "@/assets/project/p8.jpg";
 
 // Sample portfolio data
 const portfolioItems = [
   {
     id: 1,
     title: "Social Media Campaign",
-    category: "social-media",
-    image: "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+    category: "printing",
+    image: p1,
   },
   {
     id: 2,
     title: "Brand Identity Design",
     category: "printing",
-    image: "https://images.unsplash.com/photo-1634942536970-29311d2584c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+    image: p2,
   },
   {
     id: 3,
     title: "E-commerce Website",
-    category: "web-design",
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+    category: "printing",
+    image: p3,
   },
   {
     id: 4,
     title: "Product Showcase Video",
-    category: "video-editing",
-    image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+    category: "printing",
+    image: p4,
   },
   {
     id: 5,
     title: "Marketing Brochure",
     category: "printing",
-    image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+    image: p5,
   },
   {
     id: 6,
     title: "Instagram Stories",
-    category: "social-media",
-    image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+    category: "printing",
+    image: p6,
   },
   {
     id: 7,
     title: "Mobile App UI Design",
-    category: "web-design",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+    category: "printing",
+    image: p7,
   },
   {
     id: 8,
     title: "Product Promo Video",
-    category: "video-editing",
-    image: "https://images.unsplash.com/photo-1536240478700-b869070f9279?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
-  }
+    category: "printing",
+    image: p8,
+  },
 ];
 
 // Categories
@@ -62,7 +69,7 @@ const categories = [
   { id: "social-media", label: "Social Media" },
   { id: "printing", label: "Printing" },
   { id: "web-design", label: "Web Design" },
-  { id: "video-editing", label: "Video Editing" }
+  { id: "video-editing", label: "Video Editing" },
 ];
 
 const Portfolio = () => {
@@ -82,34 +89,54 @@ const Portfolio = () => {
             Explore Our Creative Projects and Success Stories
           </p>
         </div>
-        
-        <Tabs defaultValue="all" value={currentTab} onValueChange={setCurrentTab} className="w-full mb-10">
+
+        <Tabs
+          defaultValue="all"
+          value={currentTab}
+          onValueChange={setCurrentTab}
+          className="w-full mb-10"
+        >
           <div className="flex justify-center mb-8">
             <TabsList className="glass">
-              {categories.map(category => (
+              {categories.map((category) => (
                 <TabsTrigger key={category.id} value={category.id}>
                   {category.label}
                 </TabsTrigger>
               ))}
             </TabsList>
           </div>
-          
-          {categories.map(category => (
+
+          {categories.map((category) => (
             <TabsContent key={category.id} value={category.id} className="mt-0">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
                 {portfolioItems
-                  .filter(item => category.id === "all" || item.category === category.id)
-                  .map(item => (
-                    <div key={item.id} className="portfolio-item animate-fade-up">
+                  .filter(
+                    (item) =>
+                      category.id === "all" || item.category === category.id
+                  )
+                  .map((item) => (
+                    <div
+                      key={item.id}
+                      className="break-inside-avoid rounded-xl overflow-hidden shadow-lg"
+                    >
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="w-full h-64 object-cover rounded-xl"
+                        className="w-full h-auto object-cover rounded-xl"
                       />
-                      <div className="portfolio-item-overlay">
+                      <div className="portfolio-item-overlay p-4 bg-gray-800 bg-opacity-75">
                         <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                        <p className="mb-4 text-sm text-white/80">{categories.find(c => c.id === item.category)?.label}</p>
-                        <Button variant="outline" size="sm" className="bg-white/10 hover:bg-white/20 border-white/20">
+                        <p className="mb-4 text-sm text-white/80">
+                          {
+                            categories.find((c) => c.id === item.category)
+                              ?.label
+                          }
+                        </p>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="bg-white/10 hover:bg-white/20 border-white/20"
+                        >
                           <ExternalLink className="h-4 w-4 mr-2" /> View Details
                         </Button>
                       </div>
@@ -119,17 +146,17 @@ const Portfolio = () => {
             </TabsContent>
           ))}
         </Tabs>
-        
+
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
           <Button
             variant="outline"
             size="lg"
-            onClick={() => window.open('/portfolio', '_blank')}
+            onClick={() => window.open("/portfolio", "_blank")}
           >
             View More
           </Button>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="btn-gradient"
             onClick={handleDownloadPortfolio}
           >

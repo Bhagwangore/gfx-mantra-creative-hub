@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import homeSection from "../assets/homeSection.jpeg"
 
 const Hero = () => {
   const handleGetServiceClick = () => {
@@ -11,7 +12,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen pt-32 pb-20 overflow-hidden">
+    <section id="home" className="relative md:pb-20 pt-32 pb-10 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-0 right-0 -z-10 h-96 w-96 rounded-full bg-primary/5 blur-3xl"></div>
       <div className="absolute bottom-40 left-20 -z-10 h-64 w-64 rounded-full bg-blue-400/10 blur-3xl"></div>
@@ -42,7 +43,7 @@ const Hero = () => {
                 </Button>
               </div>
               
-              <div className="grid grid-cols-3 gap-4 pt-8 border-t animate-fade-up" style={{ animationDelay: '0.7s' }}>
+              {/* <div className="grid grid-cols-3 gap-4 pt-8 border-t animate-fade-up" style={{ animationDelay: '0.7s' }}>
                 <div className="space-y-1">
                   <p className="text-2xl md:text-3xl font-bold">100+</p>
                   <p className="text-sm text-muted-foreground">Projects Completed</p>
@@ -55,7 +56,7 @@ const Hero = () => {
                   <p className="text-2xl md:text-3xl font-bold">10+</p>
                   <p className="text-sm text-muted-foreground">Team Members</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           
@@ -66,9 +67,9 @@ const Hero = () => {
               
               <div className="relative animate-fade-up glass rounded-2xl shadow-xl overflow-hidden" style={{ animationDelay: '0.4s' }}>
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  src={homeSection} 
                   alt="Designer working on creative project" 
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             </div>

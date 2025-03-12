@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import gfxMantraLogo from "../assets/gfxMantraLogo.png"
 
 const navItems = [
   { label: 'Home', id: 'home' },
@@ -22,8 +23,8 @@ const Navbar = () => {
       const scrollPosition = window.scrollY + 100;
 
       sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
+        const sectionTop = (section as HTMLElement).offsetTop;
+        const sectionHeight = (section as HTMLElement).offsetHeight;
         const sectionId = section.getAttribute('id') || '';
 
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
@@ -55,7 +56,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold text-primary">GFX Mantra</h1>
+            {/* <h1 className="text-xl font-bold text-primary">GFX Mantra</h1> */}
+            <img  src={gfxMantraLogo} alt="logo" className='w-[30%]'/>
           </div>
           
           {/* Desktop navigation */}

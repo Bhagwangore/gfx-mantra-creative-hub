@@ -103,15 +103,15 @@ const Services = () => {
           {/* Stats counter */}
           <div className="flex justify-center gap-10 mt-10 mb-16">
             <div className="text-center">
-              <div className="text-4xl font-bold mb-1">100+</div>
+              <div className="text-4xl font-bold mb-1">15+</div>
               <div className="text-sm text-muted-foreground">Projects</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold mb-1">350+</div>
+              <div className="text-4xl font-bold mb-1">6+</div>
               <div className="text-sm text-muted-foreground">Clients</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold mb-1">10+</div>
+              <div className="text-4xl font-bold mb-1">3+</div>
               <div className="text-sm text-muted-foreground">Team Members</div>
             </div>
           </div>
@@ -164,6 +164,7 @@ const Services = () => {
                   Email
                 </Button>
               </div>
+              <p className='m-auto text-center mt-10'>gfxmantra777@gmail.com</p>
             </div>
           </div>
         </DialogContent>

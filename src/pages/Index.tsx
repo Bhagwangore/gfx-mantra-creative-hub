@@ -9,6 +9,7 @@ import Career from "@/components/Career";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
+import holi from "../assets/GIF/holi.gif"
 
 const Index = () => {
   useEffect(() => {
@@ -25,11 +26,12 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
+        <img src={holi}  alt="holi"  className="m-auto w-[90%] h-[40vh] lg:w-[100%]"/>
         <Services />
         <Portfolio />
         <Testimonials />
         <About />
-        <Career />
+        {/* <Career /> */}
         <Contact />
       </main>
       <Footer />
