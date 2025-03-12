@@ -29,8 +29,8 @@ const Index = () => {
         <img src={holi}  alt="holi"  className="m-auto w-[90%] h-[40vh] lg:w-[100%]"/>
         <Services />
         <Portfolio />
-        <Testimonials />
-        <About />
+        {/* <Testimonials /> */}
+        {/* <About /> */}
         {/* <Career /> */}
         <Contact />
       </main>

@@ -124,22 +124,6 @@ const Portfolio = () => {
                         alt={item.title}
                         className="w-full h-auto object-cover rounded-xl"
                       />
-                      <div className="portfolio-item-overlay p-4 bg-gray-800 bg-opacity-75">
-                        <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                        <p className="mb-4 text-sm text-white/80">
-                          {
-                            categories.find((c) => c.id === item.category)
-                              ?.label
-                          }
-                        </p>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="bg-white/10 hover:bg-white/20 border-white/20"
-                        >
-                          <ExternalLink className="h-4 w-4 mr-2" /> View Details
-                        </Button>
-                      </div>
                     </div>
                   ))}
               </div>

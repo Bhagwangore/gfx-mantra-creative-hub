@@ -69,7 +69,7 @@ const Hero = () => {
                 <img 
                   src={homeSection} 
                   alt="Designer working on creative project" 
-                  className="w-full h-auto object-contain"
+                  className="w-full  object-contain"
                 />
               </div>
             </div>

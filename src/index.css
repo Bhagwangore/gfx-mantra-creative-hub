@@ -182,9 +182,9 @@
   @apply relative overflow-hidden rounded-xl transition-all duration-300 hover:shadow-xl;
 }
 
-.portfolio-item-overlay {
+/* .portfolio-item-overlay {
   @apply absolute inset-0 flex flex-col items-center justify-center bg-primary/80 p-4 text-white opacity-0 transition-opacity duration-300 hover:opacity-100;
-}
+} */
 
 /* Service card effects */
 .service-card {
@@ -196,6 +196,6 @@
   @apply absolute -bottom-2 -right-2 h-16 w-16 rounded-tl-3xl bg-primary/10 transition-all duration-300;
 }
 
-.service-card:hover::before {
+/* .service-card:hover::before {
   @apply -bottom-1 -right-1 h-24 w-24 bg-primary/20;
-}
+} */
