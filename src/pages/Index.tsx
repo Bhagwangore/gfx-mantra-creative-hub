@@ -26,7 +26,7 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
-        <img src={holi}  alt="holi"  className="m-auto w-[90%] h-[40vh] lg:w-[100%]"/>
+        <img src={holi}  alt="holi"  className="m-auto w-[90%] h-auto lg:w-[100%]"/>
         <Services />
         <Portfolio />
         {/* <Testimonials /> */}
