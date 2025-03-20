@@ -35,7 +35,6 @@ const ProjectManager = () => {
   };
 
   const uploadMedia = async () => {
-    if (!selectedFiles.length) return formData.mediaUrls;
 
     const uploadedUrls = [];
     for (let i = 0; i < selectedFiles.length; i++) {
