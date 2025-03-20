@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
-const MOCKAPI_URL = process.env.REACT_APP_MOCKAPI_URL;
+const MOCKAPI_URL = import.meta.env.VITE_MOCKAPI_URL;
 
 const categories = [
   { id: "all", label: "All" },
