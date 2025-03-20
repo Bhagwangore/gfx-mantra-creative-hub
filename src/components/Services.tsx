@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Smartphone, Globe, Video, Image, Users, PenTool, Palette } from "lucide-react";
+import { Smartphone, Globe, Video, Image, Users, PenTool, Palette, ChartBar, Search } from "lucide-react";
 
 type Service = {
   id: number;
@@ -19,7 +19,7 @@ const services: Service[] = [
     name: "Social Media Handling",
     price: "₹3,500/month",
     description: "Comprehensive social media management to boost your online presence",
-    icon: <Users className="h-10 w-10 text-primary" />,
+    icon: <Users className="h-10 w-10 text-primary" />, 
     benefits: ["Daily content posts", "Community engagement", "Analytics reports", "Trend integration", "Strategy development"]
   },
   {
@@ -40,22 +40,14 @@ const services: Service[] = [
   },
   {
     id: 4,
-    name: "Web Development",
-    price: "₹10,000",
+    name: "Web / App Development",
+    price: "₹12,000",
     description: "Custom website development with stunning design and functionality",
     icon: <Globe className="h-10 w-10 text-primary" />,
     benefits: ["Responsive design", "SEO optimization", "Content management", "User-friendly interface", "Performance optimization"]
   },
   {
     id: 5,
-    name: "App Development",
-    price: "₹12,000",
-    description: "Feature-rich mobile applications for Android and iOS platforms",
-    icon: <Smartphone className="h-10 w-10 text-primary" />,
-    benefits: ["Native development", "User experience design", "Performance optimization", "App store submission", "Ongoing support"]
-  },
-  {
-    id: 6,
     name: "Video Editing",
     price: "₹500",
     description: "Professional video editing to elevate your visual content",
@@ -63,12 +55,28 @@ const services: Service[] = [
     benefits: ["Color grading", "Transitions", "Sound effects", "Motion graphics", "Quick delivery"]
   },
   {
-    id: 7,
+    id: 6,
     name: "Reels Editing",
     price: "₹500",
     description: "Trending and engaging reels for maximum social media impact",
     icon: <Palette className="h-10 w-10 text-primary" />,
     benefits: ["Trend integration", "Music selection", "Visual effects", "Quick turnaround", "Platform optimization"]
+  },
+  {
+    id: 7,
+    name: "Digital Marketing",
+    price: "₹15,000",
+    description: "Strategic digital marketing campaigns to enhance your brand visibility",
+    icon: <ChartBar className="h-10 w-10 text-primary" />,
+    benefits: ["Targeted ads", "Email marketing", "Content strategy", "Lead generation", "Performance tracking"]
+  },
+  {
+    id: 8,
+    name: "SEO Handling",
+    price: "₹15,000",
+    description: "Optimized SEO strategies to improve your search engine ranking",
+    icon: <Search className="h-10 w-10 text-primary" />,
+    benefits: ["Keyword research", "On-page optimization", "Backlink building", "Analytics monitoring", "Technical SEO"]
   }
 ];
 
