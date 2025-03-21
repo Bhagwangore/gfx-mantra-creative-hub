@@ -85,14 +85,14 @@ const Navbar = () => {
                 </li>
               ))}
 
-              <li >
+              {/* <li >
                 <button
                   onClick={() => navigate("/dashboard")}
                  
                 >
                   dashboard
                 </button>
-              </li>
+              </li> */}
             </ul>
           </nav>
 
